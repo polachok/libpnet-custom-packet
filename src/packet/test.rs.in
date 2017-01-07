@@ -1,0 +1,7 @@
+#[packet]
+pub struct Test {
+    test: u8,
+    #[payload]
+    #[length = "8"]
+    payload: Vec<u8>,
+}

@@ -1,0 +1,21 @@
+[package]
+name = "libpnet-custom-packet"
+version = "0.1.0"
+authors = ["Alexander Polakov <plhk@sdf.org>"]
+build = "build.rs"
+
+[dependencies]
+
+[build-dependencies.pnet_macros]
+version = "0.12"
+features = [ "with-syntex" ]
+
+[dependencies.pnet_macros_support]
+version = "0.1.1"
+
+[dependencies.pnet]
+version = "0.15"
+features = [ "with-syntex" ]
+
+[build-dependencies.syntex]
+version = "0.42"
