@@ -7,14 +7,17 @@ build = "build.rs"
 [dependencies]
 
 [build-dependencies.pnet_macros]
-version = "0.12"
+git = "https://github.com/polachok/libpnet"
+branch = "le"
 features = [ "with-syntex" ]
 
 [dependencies.pnet_macros_support]
-version = "0.1.1"
+git = "https://github.com/polachok/libpnet"
+branch = "le"
 
 [dependencies.pnet]
-version = "0.15"
+git = "https://github.com/polachok/libpnet"
+branch = "le"
 features = [ "with-syntex" ]
 
 [build-dependencies.syntex]

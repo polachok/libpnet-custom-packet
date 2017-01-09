@@ -1,7 +1,25 @@
+use pnet_macros_support::types::*;
+
 #[packet]
-pub struct Test {
-    test: u8,
+pub struct LittleEndian {
+	one_bit: u1, // byte 0
+	fifteen_bits: u15le, // byte 0 and 1
+	five_bits: u5, // byte 2[0..5]
+	sixteen_bits: u16le, // byte 2[5..7] | byte3[0..7] | byte4 [0..5]
+	three_bits: u3, // byte 4
     #[payload]
-    #[length = "8"]
+    #[length = "0"]
+    payload: Vec<u8>,
+}
+
+#[packet]
+pub struct BigEndian {
+	one_bit: u1,
+	fifteen_bits: u15be,
+	five_bits: u5,
+	sixteen_bits: u16be,
+	three_bits: u3,
+    #[payload]
+    #[length = "0"]
     payload: Vec<u8>,
 }
